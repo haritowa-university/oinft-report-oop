@@ -3,22 +3,4 @@
 
 По своей сути, \textbf{наследование} -- просто повторное обявление группы переменных и функций в пределах нового скоупа(например, типа). Программисты на C делали подобное действие задолго до ОО языков. В листингах \ref{inheritance:fake:1}, \ref{inheritance:fake:2} и \ref{inheritance:fake:3} отражено дополнение к листингам \ref{incapsulation:fake:1} и \ref{incapsulation:fake:2}, которое объявляет новую структуру \lstinline[language=C]{struct NamedStruct}, <<наследующую>> поля \lstinline[language=C]{double x,y;} и добавляющее новое. Далее эта структура успешно используется в методе \lstinline[language=C]{distance()}.
 
-\begin{code}
-	\lstinputlisting{inc/src/namedPoint.h}
-   \caption{namedPoint.h}
-   \label{inheritance:fake:1}
-\end{code}
-
-\begin{code}
-	\lstinputlisting{inc/src/namedPoint.c}
-   \caption{namedPoint.c}
-   \label{inheritance:fake:2}
-\end{code}
-
-\begin{code}
-	\lstinputlisting{inc/src/namedPointMain.c}
-   \caption{main.c}
-   \label{inheritance:fake:3}
-\end{code}
-
 Подобные трюки были распространены среди программистов до появления ОО. На самом деле, именно так устроено наследование(не множественное) в С++. Другими словами, наследование тоже не появилось вместе с \gls{oop}, однако ОО подход формализовал этот процесс, значительно упростил и сделал простым в использовании: до поддержки наследования на уровне языка, приходилось дублировать код, преобразовывать типы при передаче их в качестве параметра, постоянно следить за корректностью данных самостоятельно.
