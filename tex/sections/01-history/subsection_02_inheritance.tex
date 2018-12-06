@@ -1,0 +1,22 @@
+\subsection{Наследование}
+\label{sec:inheritance}
+
+По своей сути, \textbf{наследование} -- просто повторное обявление группы переменных и функций в пределах нового скоупа(например, типа). Программисты на C делали подобное действие задолго до ОО языков. В листингах \ref{inheritance:fake:1}, \ref{inheritance:fake:2} и \ref{inheritance:fake:3} отражено дополнение к листингам \ref{incapsulation:fake:1} и \ref{incapsulation:fake:2}, которое объявляет новую структуру \lstinline[language=C]{struct NamedStruct}, <<наследующую>> поля \lstinline[language=C]{double x,y;} и добавляющее новое. Далее эта структура успешно используется в методе \lstinline[language=C]{distance()}, что похоже на передачу наследника типа в качестве аргумента, в котором должен быть родитель.
+
+\begin{code}
+	\lstinputlisting{inc/src/namedPoint.h}
+   \caption{namedPoint.h}
+   \label{inheritance:fake:1}
+\end{code}
+
+\begin{code}
+	\lstinputlisting{inc/src/namedPoint.c}
+   \caption{namedPoint.c}
+   \label{inheritance:fake:2}
+\end{code}
+
+\begin{code}
+	\lstinputlisting{inc/src/namedPointMain.c}
+   \caption{main.c}
+   \label{inheritance:fake:2}
+\end{code}
